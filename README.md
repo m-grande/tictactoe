@@ -35,7 +35,7 @@ This project implements a simple Tic-Tac-Toe game in Python, with a single-playe
 To start the game, run the following command:
 
 ```bash
-python game.py
+python game/game.py
 ```
 Follow the on-screen instructions to play against the computer. Enter the number corresponding to the cell where you want to make your move (1-9).
 
