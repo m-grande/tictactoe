@@ -4,9 +4,9 @@ This project implements a simple Tic-Tac-Toe game in Python, with a single-playe
 
 ## Files Description
 
-- `script.py`: Contains the implementation of the Tic-Tac-Toe game.
-- `game.py`: Main script to start the game.
-- `test_game.py`: Contains unit tests to verify the game's functionality.
+- `script.py`: contains the implementation of the Tic-Tac-Toe game.
+- `game.py`: main script to start the game.
+- `test_game.py`: contains unit tests to verify the game's functionality.
 
 
 ## Requirements
@@ -50,16 +50,18 @@ pytest -v
 ## How the Code Works
 
 `script.py`
+
 The **TicTacToe** class is the backbone of this project, handling all aspects of the game, including:
 
-- **Game Board Initialization**: The board is represented as a list of strings, initially numbered 1 through 9, representing each cell's position.
-- **Player Moves**: The `make_move()` method allows players to select a cell on the board, updating the board state if the move is valid.
-- **Computer Moves**: The `computer_move()` method randomly selects an available cell for the computer's move.
-- **Winner Check**: The `check_winner()` method checks the board against predefined winning conditions (rows, columns, diagonals) to determine if there is a winner.
-- **Draw Check**: The `check_draw()` method verifies if all cells are filled without any player winning, indicating a draw.
-- **Player Switching**: The `player_switch_after_move()` method switches turns between the human player and the computer.
+- **Game Board Initialization**: the board is represented as a list of strings, initially numbered 1 through 9, representing each cell's position.
+- **Player Moves**: the `make_move()` method allows players to select a cell on the board, updating the board state if the move is valid.
+- **Computer Moves**: the `computer_move()` method randomly selects an available cell for the computer's move.
+- **Winner Check**: the `check_winner()` method checks the board against predefined winning conditions (rows, columns, diagonals) to determine if there is a winner.
+- **Draw Check**: the `check_draw()` method verifies if all cells are filled without any player winning, indicating a draw.
+- **Player Switching**: the `player_switch_after_move()` method switches turns between the human player and the computer.
 
 `game.py`
+
 The **game.py** script serves as the entry point to the game. It creates an instance of the TicTacToe class and manages the flow of the game:
 
 - It resets the board for each new game.
@@ -67,10 +69,11 @@ The **game.py** script serves as the entry point to the game. It creates an inst
 - It checks for a winner or a draw after each move and handles the end-of-game scenarios.
 
 `test_game.py`
+
 This file includes a comprehensive set of unit tests for the Tic-Tac-Toe game:
 
 - **Board Printing Test**: `test_print_board()` ensures the game board is displayed correctly.
-- **Move Validation** Tests: `test_is_valid_move()` verifies that moves are only allowed in unoccupied cells.
+- **Move Validation Tests**: `test_is_valid_move()` verifies that moves are only allowed in unoccupied cells.
 - **Move Execution Tests**: `test_make_valid_move()` and `test_make_invalid_move()` check that moves are correctly executed and rejected if invalid.
 - **Winning Condition Tests**: `test_horizontal_win()`, `test_vertical_win()`, and `test_diagonal_win()` confirm that the game correctly identifies winning conditions.
 - **Draw Condition Tests**: `test_check_draw_with_draw()` and `test_check_draw_without_draw()` ensure the game correctly identifies when a draw occurs.
